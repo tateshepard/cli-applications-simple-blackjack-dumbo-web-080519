@@ -6,8 +6,10 @@ def prompt_user
   puts "Type 'h' to hit or 's' to stay"
 end
 
-def display_card_total
-  # code #display_card_total here
+def initial_round
+  first_round = deal_card + deal_card
+  display_card_total(first_round)
+  return first_round
 end
 
 def prompt_user
