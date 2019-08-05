@@ -1,6 +1,3 @@
-##################
-# shared methods #
-##################
 
 def welcome
   # code #welcome here
@@ -15,9 +12,6 @@ def display_card_total(card_total)
 end
 
 
-##########
-# rounds #
-##########
 
 def welcome
   puts "Welcome to the Blackjack Table"
@@ -62,15 +56,6 @@ def hit?(card_total)
   end
   card_total
   
-  ## Alternative solution - this solution calls hit? recursively if given an invalid command
-  # if user_input == "h"
-  #   card_total += deal_card
-  # elsif user_input == "s"
-  #   card_total
-  # else
-  #   invalid_command
-  #   hit?(card_total)
-  # end
   
 end
 
@@ -78,9 +63,6 @@ def invalid_command
   puts "Please enter a valid command"
 end
 
-##########
-# runner #
-##########
 
 def runner
   welcome
