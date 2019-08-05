@@ -1,10 +1,33 @@
+##################
+# shared methods #
+##################
+
+def welcome
+  # code #welcome here
+end
+
+def deal_card
+  rand(1..11)
+end
+
+def display_card_total(card_total)
+  puts "Your cards add up to #{card_total}"
+end
+
+
+##########
+# rounds #
+##########
+
 def welcome
   puts "Welcome to the Blackjack Table"
 end
 
+
 def prompt_user
   puts "Type 'h' to hit or 's' to stay"
 end
+
 
 def initial_round
   first_round = deal_card + deal_card
@@ -20,9 +43,7 @@ def end_game(card_total)
   puts "Sorry, you hit #{card_total}. Thanks for playing!"
 end
 
-def initial_round
-  # code #initial_round here
-end
+
 
 def hit?(card_total)
   valid_inputs = ["h", "s"]
@@ -40,14 +61,26 @@ def hit?(card_total)
     card_total += deal_card
   end
   card_total
-
-def invalid_command
-  # code invalid_command here
+  
+  ## Alternative solution - this solution calls hit? recursively if given an invalid command
+  # if user_input == "h"
+  #   card_total += deal_card
+  # elsif user_input == "s"
+  #   card_total
+  # else
+  #   invalid_command
+  #   hit?(card_total)
+  # end
+  
 end
 
-#####################################################
-# get every test to pass before coding runner below #
-#####################################################
+def invalid_command
+  puts "Please enter a valid command"
+end
+
+##########
+# runner #
+##########
 
 def runner
   welcome
@@ -58,5 +91,3 @@ def runner
   end
   end_game(card_total)
 end
-
-    
