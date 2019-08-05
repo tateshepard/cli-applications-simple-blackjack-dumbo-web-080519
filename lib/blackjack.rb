@@ -2,8 +2,8 @@ def welcome
   puts "Welcome to the Blackjack Table"
 end
 
-def deal_card
-  # code #deal_card here
+def prompt_user
+  puts "Type 'h' to hit or 's' to stay"
 end
 
 def display_card_total
