@@ -12,8 +12,8 @@ def initial_round
   return first_round
 end
 
-def prompt_user
-  # code #prompt_user here
+def get_user_input
+  gets.chomp.strip
 end
 
 def get_user_input
